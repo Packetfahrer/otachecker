@@ -85,7 +85,7 @@ void printURL(NSString *device, NSString *ios, NSDictionary *softwareupdates){
     printf("ota for %s %s is not signed\n",[device UTF8String],[ios UTF8String]);
 }
 
-int main(int argc, const char * argv[]) {
+int main(int argc, /*const*/ char * argv[]) {
     @autoreleasepool {
         printf("downloading com_apple_MobileAsset_SoftwareUpdate.xml\n");
         NSDictionary *softwareupdates = [[NSDictionary alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://mesu.apple.com/assets/com_apple_MobileAsset_SoftwareUpdate/com_apple_MobileAsset_SoftwareUpdate.xml"]];
